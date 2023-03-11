@@ -1,22 +1,20 @@
 #include<iostream>
 using namespace std;
 
-void FillRand(const int MyNumber,  int arrayy[]);
+void FillRand(const int MyNumber, int arrayy[]);
 void Print(const int MyNumber, int arrayy[]);
-void Sum(const int MyNumber, int arrayy[]);
+int Sum(const int MyNumber, int arrayy[]);
 void Avg(const int MyNumber, int arrayy[]);
-void minValueIn(const int MyNumber, int arrayy[]);
-void maxValueIn(const int MyNumber, int arrayy[]);
-void Sort(const int MyNumber, int arrayy[]);
+
 void main()
 {
 	setlocale(LC_ALL, "Russian");
 	const int MyNumber = 10;
 	int arrayy[MyNumber];
-	FillRand(arrayy, MyNumber);
-	Print(arrayy, MyNumber);
-	Sum(arrayy, MyNumber);
-	Avg(arrayy, MyNumber);
+	FillRand(MyNumber, arrayy);
+	Print(MyNumber, arrayy);
+	Sum(MyNumber, arrayy);
+	Avg(MyNumber, arrayy);
 }
 
 void FillRand(int arrayy[], const int MyNumber)
@@ -34,7 +32,7 @@ void Print(int arrayy[], const int MyNumber)
 	}
 	cout << endl;
 }
-void Sum(int arrayy[], const int MyNumber)
+int Sum(int arrayy[], const int MyNumber)
 {
 	for (int i = 0; i < MyNumber; i++)
 	{
@@ -43,8 +41,7 @@ void Sum(int arrayy[], const int MyNumber)
 		{
 			summa += arrayy[i];
 		}
-		cout << "Сумма всех элементов массива равна:" << summa;
-		cout << endl;
+		return summa;
 	}
 }
 void Avg(const int MyNumber, int arrayy[])
@@ -54,18 +51,11 @@ void Avg(const int MyNumber, int arrayy[])
 	{
 		summa += arrayy[i];
 	}
-	int middlaref = summa / MyNumber;
-	cout << "Среднее арифметическое элементов массива:" << middlaref << endl;
+	int middlsumma = summa / MyNumber;
+	cout << "Среднее арифметическое элементов массива:" << middlsumma << endl;
+	cout << endl;
 }
 
-		
-	
-
-
-
-
-
-	
 
 
 
@@ -73,5 +63,13 @@ void Avg(const int MyNumber, int arrayy[])
 
 
 
-	
+
+
+
+
+
+
+
+
+
 
