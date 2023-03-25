@@ -4,7 +4,7 @@ template<typename T>
 void shiftRight(const int MyNumber, T arrayy[])
 {
 	T buffer = arrayy[MyNumber - 1];
-	for (int i = MyNumber - 1; i > 0; i++)
+	for (int i = MyNumber - 1; i > 0; i--)
 	{
 		arrayy[i] = arrayy[i - 1];
 	}
@@ -20,7 +20,7 @@ template<typename T>
 void shiftRight(T arrayy[ROWS][COLS], const int ROWS, const int COLS)
 {
 	T buffer = arrayy[ROWS - 1][COLS - 1];
-	for (int i = ROWS - 1; i > 0; i++)
+	for (int i = ROWS - 1; i > 0; i--)
 	{
 		for (int j = COLS - 1; j > 0; j++)
 		{

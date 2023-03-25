@@ -62,12 +62,11 @@ void FillRand(char arrayy[ROWS][COLS], const int ROWS, const int COLS)
 	}
 }
 
-template<typename T>
-void UniqRand(const int MyNumber, T arrayy[])
+void UniqRand(const int MyNumber, int arrayy[])
 {
 	for (int i = 0; i < MyNumber; i++)
 	{
-		T unique;//פכאד 
+		bool unique;//פכאד 
 		do
 		{
 			arrayy[i] = rand() % MyNumber;
